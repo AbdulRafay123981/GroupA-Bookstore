@@ -12,7 +12,7 @@ This project involves creating a comprehensive online presence for a bookstore. 
 
 ## GitHub Repository
 - **Repository Link:** [https://github.com/AbdulRafay123981/GroupA-Bookstore](https://github.com/AbdulRafay123981/GroupA-Bookstore)
-- **GitHub Pages Link (Live Website):** [https://abdulrafay123981.github.io/GroupA-Bookstore/](https://abdulrafay123981.github.io/GroupA-Bookstore/)
+- **Live Website:** [https://abdulrafay123981.github.io/GroupA-Bookstore/](https://abdulrafay123981.github.io/GroupA-Bookstore/)
 
 ## Deliverables
 1. **Website (HTML/CSS):** A responsive book catalog website with hover effects.
@@ -26,3 +26,4 @@ This project involves creating a comprehensive online presence for a bookstore. 
 1. Clone the repository:
    ```bash
    git clone https://github.com/AbdulRafay123981/GroupA-Bookstore.git
+   cd GroupA-Bookstore
