@@ -1,27 +1,28 @@
-# Group Project: Website & Data Workflow
+# Bookstore Website Project
 
 ## Project Overview
-This project demonstrates a full workflow starting from a website design, documentation, Excel data analysis, presentation slides, version control on GitHub, a short animated video, and LinkedIn publication. All deliverables are consistent and reference the same website project.
+This project involves creating a comprehensive online presence for a bookstore. The workflow includes publishing a website, creating supporting documentation (Word), data analysis (Excel), a presentation (PowerPoint), version control and publishing via GitHub, a short animated video, and a LinkedIn post. All deliverables are centered around the same bookstore project, ensuring consistency throughout.
 
 ## Group Members
-- Abdul Rafay (Github: AbdulRafay123981)
+- Abdul Rafay (GitHub: [AbdulRafay123981](https://github.com/AbdulRafay123981))
 - Abdul Ahad (Github: AbdulAhada17)
 - Asad Hussain (Github: muhammadasadhussain8666302)
-- Maheen Mohsin (Github: maheen-a11y)
+- Maheen Mohsin (Github: maheen-a11y) 
 - Alishwa Rizwan
 
 ## GitHub Repository
-- Repo link: https://github.com/AbdulRafay123981/GroupA-Bookstore.git
-- Github Pages link: https://abdulrafay123981.github.io/GroupA-Bookstore/
+- **Repository Link:** [https://github.com/AbdulRafay123981/GroupA-Bookstore](https://github.com/AbdulRafay123981/GroupA-Bookstore)
+- **GitHub Pages Link (Live Website):** [https://abdulrafay123981.github.io/GroupA-Bookstore/](https://abdulrafay123981.github.io/GroupA-Bookstore/)
 
 ## Deliverables
-- Live website (HTML + CSS)
-- Word document describing website & workflow
-- Excel workbook with data and charts
-- PowerPoint presentation
-- Short animated video (MP4)
-- LinkedIn post with GitHub link
+1. **Website (HTML/CSS):** A responsive book catalog website with hover effects.
+2. **Word Document:** A professional bookstore brochure with columns and images, describing the project.
+3. **Excel Workbook:** An inventory and sales tracker with calculations and charts.
+4. **PowerPoint Presentation:** A slideshow featuring the bookstore's books and project overview.
+5. **Video Animation:** A 30-60 second animated demo of the project.
+6. **LinkedIn Post:** A post showcasing the project video and GitHub link.
 
-## How to Use / Run
-1. Clone the repo:
-git clone https://github.com/AbdulRafay123981/GroupA-Bookstore.git
+## How to Run the Website Locally
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/AbdulRafay123981/GroupA-Bookstore.git
