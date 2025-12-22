@@ -12,6 +12,7 @@ This project demonstrates a full workflow starting from a website design, docume
 
 ## GitHub Repository
 - Repo link: https://github.com/AbdulRafay123981/GroupA-Bookstore.git
+- Github Pages link: https://abdulrafay123981.github.io/GroupA-Bookstore/
 
 ## Deliverables
 - Live website (HTML + CSS)
