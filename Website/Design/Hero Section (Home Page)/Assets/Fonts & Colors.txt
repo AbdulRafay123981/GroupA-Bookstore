@@ -1,0 +1,9 @@
+Fonts Used: 
+- Berlin Sans FB Demi (A PLACE FOR CURIOUS MINDS)
+- Eras Medium ITC ("Discover ideas worth your time" & Nav Bar Buttons)
+- Eras Bold ITC (BOOKSTORE LOGO)
+
+Colors:
+- e58817 (Brownish Yellow)
+- dcc4a7 (Off-White)
+- 043140 (Navy Blue)
