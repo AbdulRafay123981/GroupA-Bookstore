@@ -1,0 +1,249 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/*  Colors:
+- e58817 (Brownish Yellow)
+- dcc4a7 (Off-White)
+- 043140 (Navy Blue) */
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+
+nav {
+    display: flex;
+    background-color: #043140;
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#Logo {
+    padding: 25px;
+    font-weight: bold;
+    color: white;
+}
+
+#RightNav {
+    display: flex;
+    width: 100%;
+    margin-right: 5%;
+    padding: 10px;
+    justify-content: right;
+    gap: 20px;
+}
+
+.NavI {
+    display: block;
+    padding: 15px;
+    z-index: 2;
+    color: #e58817;
+}
+
+.NavI:hover {
+    color: white !important;
+
+}
+
+.NavI:visited {
+    color: #e58817;
+}
+
+#Op1 {
+    color: white;
+}
+
+#Search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 10px;
+}
+
+#Search input {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-bottom: 2px solid #e58817;
+    padding: 10px 15px;
+    color: white;
+    font-size: 16px;
+    outline: none;
+
+    transition: all 0.3s ease;
+}
+
+
+#Search input:focus {
+    background: rgba(255, 255, 255, 0.2);
+    border-bottom-color: white;
+    box-shadow: 0 4px 6px -6px #e58817;
+}
+
+#Search input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    text-align: left;
+
+}
+
+#Search button {
+    background: #043140;
+    color: rgb(100, 100, 100);
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+#Search button:hover {
+    background: white;
+}
+
+#Op6 {
+    background-color: #e58817;
+    color: rgb(100, 100, 100);
+    border-radius: 40px;
+    font-weight: bolder;
+}
+
+#Op6:hover {
+    background-color: darkorange;
+    color: rgb(100, 100, 100);
+}
+
+#Head {
+    background-image: url(./Pics/BG\ Img.png);
+    height: 700px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 0;
+    padding-top: 70px;
+}
+
+
+.Text {
+    position: relative;
+    z-index: 10;
+}
+
+.Text h1 {
+
+    color: #e58817;
+    font-family: 'Berlin Sans FB Demi', sans-serif;
+    margin-top: 30%;
+    margin-left: 20%;
+    text-shadow: 21px 1px 50px rgba(0, 0, 0, 1);
+    font-size: 50px;
+}
+
+.Text p {
+    z-index: 2;
+    color: white;
+    margin-left: 20%;
+    font-family: "Poppins", sans-serif;
+    font-weight: light;
+    font-style: italic;
+    font-size: 20px;
+}
+
+.Image {
+    margin-top: 10%;
+    margin-left: 30%;
+}
+
+body {
+    background-color: #043140;
+}
+
+.band {
+    height: 500px;
+    width: 1684px;
+    background-color: #e58817;
+    background-image: url(./Pics/Library.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.Bod {
+    display: block;
+    background-color: #043140;
+    height: 450px;
+}
+
+.inf {
+    display: inline-flex;
+    margin-bottom: 10%;
+}
+
+#im {
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+.boxes {
+    height: 300px;
+    width: 200px;
+    margin-left: 5%;
+    position: absolute;
+}
+
+#box1 {
+    background-color: white;
+    border-radius: 23px 23px 23px 23px;
+    -webkit-border-radius: 23px 23px 23px 23px;
+    -moz-border-radius: 23px 23px 23px 23px;
+    transform: rotate(45deg);
+}
+
+#box2 {
+    background-color: #e58817;
+    border-radius: 23px 23px 23px 23px;
+    -webkit-border-radius: 23px 23px 23px 23px;
+    -moz-border-radius: 23px 23px 23px 23px;
+    transform: rotate(30deg);
+}
+
+#box3 {
+    background-color: lightblue;
+    border-radius: 23px 23px 23px 23px;
+    -webkit-border-radius: 23px 23px 23px 23px;
+    -moz-border-radius: 23px 23px 23px 23px;
+    transform: rotate(-60deg);
+}
+
+#box4 {
+    background-color: white;
+    border-radius: 23px 23px 23px 23px;
+    -webkit-border-radius: 23px 23px 23px 23px;
+    -moz-border-radius: 23px 23px 23px 23px;
+    transform: rotate(10deg);
+}
+
+#box5 {
+    position: absolute;
+    margin-left: 2%;
+    margin-top: 1%;
+}
+
+.Para {
+    color: #dcc4a7;
+    font-size: 40px;
+    margin-left: 30%;
+    margin-top: 10%;
+}
