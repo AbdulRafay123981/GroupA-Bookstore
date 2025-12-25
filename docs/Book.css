@@ -64,6 +64,10 @@ body {
     color: #333;
     margin-bottom: 20px;
 }
+.R {
+    display: flex;
+    gap: 400px;
+}
 
 .stars {
     display: flex;
@@ -78,6 +82,10 @@ body {
 
 .stars .checked {
     color: #ffcc00;
+}
+.book-info a {
+    text-align: center;
+    width: 20%;
 }
 
 
