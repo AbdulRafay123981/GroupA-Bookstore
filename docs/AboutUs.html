@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookistan</title>
+    <link rel="stylesheet" href="./Books.css">
+    <link rel="stylesheet" href="./Authors.css">
+    <link href="https://fonts.cdnfonts.com/css/berlin-sans-fb-demi" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+</head>
+<style>
+    body {
+        background-color: #064256;
+        color: white;
+    }
+
+    .about-us {
+        position: relative;
+        max-width: 900px;
+        margin: 60px auto;
+        padding: 60px 70px;
+
+        background-color: wheat;
+        color: #043140;
+
+        border-radius: 40px;
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+
+        font-family: 'Ubuntu', sans-serif;
+        line-height: 1.8;
+    }
+
+    /* Corner images */
+    .about-us .corner {
+        position: absolute;
+        width: 160px;
+        opacity: 0.9;
+        pointer-events: none;
+        /* decorative only */
+    }
+
+    .corner-top-left {
+        top: 11px;
+        right: 25px;
+    }
+
+    .corner-bottom-right {
+        bottom: 20px;
+        left: 20px;
+    }
+
+    /* Text styling */
+    .about-us p {
+        font-size: 16px;
+        margin-bottom: 22px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .about-us .closing {
+        text-align: center;
+        font-weight: 600;
+        margin-top: 30px;
+    }
+
+    /* Mobile adjustment */
+    @media (max-width: 600px) {
+        .about-us {
+            padding: 30px 25px;
+        }
+
+        .about-us .corner {
+            width: 100px;
+            opacity: 0.7;
+        }
+
+    }
+</style>
+
+<body>
+    <nav>
+        <p id="Logo">Bookistan</p>
+
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+        <label for="menu-toggle" class="close">&times;</label>
+
+        <div id="RightNav">
+            <a id="Op1" class="NavI" href="./index.html">Home</a>
+            <a id="Op2" class="NavI" href="./Books.html">Books</a>
+            <a id="Op3" class="NavI" href="./AboutUs.html">About Us</a>
+            <a id="Op4" class="NavI" href="./index.html">Blog</a>
+            <div id="Search">
+                <input type="text" placeholder="Type here..." id="Typehere">
+                <button type="submit">
+                    <img id="Op5" src="./Pics/Search.png" alt="Search">
+                </button>
+            </div>
+            <a id="Op6" class="NavI" href="./index.html">Visit Us</a>
+        </div>
+    </nav>
+    <div class="bod">
+        <div class="title">
+            <img class="Title-ornament" src="./Pics/Ornup.png" alt="">
+            <h1>About-Us</h1>
+            <img class="Title-ornament" src="./Pics/Orn.png" alt="">
+        </div>
+        <section class="about-us">
+            <img src="./Pics/Corner.png" class="corner corner-top-left" alt="">
+            <p>
+                At <strong>Bookistan</strong>, we believe that books are more than ink on paper —
+                they are doors to new worlds, quiet companions, and lifelong teachers.
+            </p>
+
+            <p>
+                Founded with a love for stories and a passion for learning, Bookistan is a welcoming
+                space for readers of all kinds. From timeless classics to modern voices, from academic
+                works to tales of pure imagination, we thoughtfully curate every title to inspire
+                curiosity, creativity, and connection.
+            </p>
+
+            <p>
+                We are more than just a bookstore. We are a community of readers, writers, and dreamers
+                who believe in the power of words to spark ideas, shape perspectives, and bring people
+                together. Whether you are searching for your next favorite book or simply enjoying the
+                calm comfort of reading, we are here for you.
+            </p>
+
+            <p class="closing">
+                At <strong>Bookistan</strong>, every book has a story — and every reader is part of ours.
+            </p>
+            <img src="./Pics/Corner2.png" class="corner corner-bottom-right" alt="">
+
+        </section>
+
+
+    </div>
+    <div class="Authors">
+        <div class="CardsAT">
+            <div class="cardA">
+                <img src="./Pics/A1.jpg" alt="Author Profile" class="profile-img">
+                <div class="card-contentA">
+                    <h2>Author Name</h2>
+                    <p>He is a famous author and is known for "Minus 10".</p>
+                    <a href="./Author.html" class="button" target="_blank">
+                        Find out more
+                        <span class="material-symbols-outlined">&rarr;</span>
+                    </a>
+                </div>
+            </div>
+            <div class="cardA">
+                <img src="./Pics/A2.png" alt="Author Profile" class="profile-img">
+                <div class="card-contentA">
+                    <h2>Author Name</h2>
+                    <p>He is a famous author and is known for "Minus 10".</p>
+                    <a href="./Author.html" class="button" target="_blank">
+                        Find out more
+                        <span class="material-symbols-outlined">&rarr;</span>
+                    </a>
+                </div>
+            </div>
+            <div class="cardA">
+                <img src="./Pics/A1.jpg" alt="Author Profile" class="profile-img">
+                <div class="card-contentA">
+                    <h2>Author Name</h2>
+                    <p>He is a famous author and is known for "Minus 10".</p>
+                    <a href="./Author.html" class="button" target="_blank">
+                        Find out more
+                        <span class="material-symbols-outlined">&rarr;</span>
+                    </a>
+                </div>
+            </div>
+            <div class="cardA">
+                <img src="./Pics/A2.png" alt="Author Profile" class="profile-img">
+                <div class="card-contentA">
+                    <h2>Author Name</h2>
+                    <p>He is a famous author and is known for "Minus 10".</p>
+                    <a href="./Author.html" class="button" target="_blank">
+                        Find out more
+                        <span class="material-symbols-outlined">&rarr;</span>
+                    </a>
+                </div>
+            </div>
+            <div class="cardA">
+                <img src="./Pics/A1.jpg" alt="Author Profile" class="profile-img">
+                <div class="card-contentA">
+                    <h2>Author Name</h2>
+                    <p>He is a famous author and is known for "Minus 10".</p>
+                    <a href="./Author.html" class="button" target="_blank">
+                        Find out more
+                        <span class="material-symbols-outlined">&rarr;</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+
+
+    </div>
+</body>
+
+</html>
