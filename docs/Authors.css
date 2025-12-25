@@ -1,0 +1,68 @@
+.CardsAT {
+    display: flex;
+    overflow: none;
+    flex-wrap: wrap;
+    gap: 20px;
+    flex-direction: row;
+}
+
+.CardsAT .cardA {
+    flex: 0 0 auto;
+    width: 280px;
+    background-color: black;
+    color: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    padding: 20px 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+}
+
+.cardA:hover {
+    background-color: gray;
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(174, 174, 174, 0.25);
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 15px auto;
+    border: 4px solid #e58817;
+}
+
+.card-contentA h2 {
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 10px 0 8px 0;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.card-contentA p {
+    font-size: 14px;
+    opacity: 0.85;
+    margin-bottom: 15px;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 16px;
+    background-color: #e58817;
+    color: white;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background-color: #043140;
+    color: white;
+    transform: scale(1.05);
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookistan</title>
+    <link rel="stylesheet" href="./Books.css">
+    <link href="https://fonts.cdnfonts.com/css/berlin-sans-fb-demi" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            background-color: #043140;
+        }
+
+        .Cat {
+            margin-top: 40px;
+            padding: 20px;
+
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+
+            width: 100%;
+        }
+
+        .Cat a {
+            display: block;
+            padding: 18px 20px;
+
+            background-color: wheat;
+            color: #043140;
+
+            text-decoration: none;
+            text-align: center;
+
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+
+            border-radius: 20px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+
+            transition: all 0.3s ease;
+        }
+
+        .Cat a:hover {
+            background-color: #e58817;
+            color: white;
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 12px 30px rgba(229, 136, 23, 0.45);
+        }
+
+        .Cat a:active {
+            transform: scale(0.96);
+        }
+
+        @media (max-width: 600px) {
+            .Cat {
+                gap: 14px;
+            }
+
+            .Cat a {
+                font-size: 14px;
+                padding: 14px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav>
+        <p id="Logo">Bookistan</p>
+
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+        <label for="menu-toggle" class="close">&times;</label>
+
+        <div id="RightNav">
+            <a id="Op1" class="NavI" href="./index.html">Home</a>
+            <a id="Op2" class="NavI" href="./Books.html">Books</a>
+            <a id="Op3" class="NavI" href="./index.html">About Us</a>
+            <a id="Op4" class="NavI" href="./index.html">Blog</a>
+            <div id="Search">
+                <input type="text" placeholder="Type here..." id="Typehere">
+                <button type="submit">
+                    <img id="Op5" src="./Pics/Search.png" alt="Search">
+                </button>
+            </div>
+            <a id="Op6" class="NavI" href="./index.html">Visit Us</a>
+        </div>
+    </nav>
+    <div class="bod">
+        <div class="title">
+            <img class="Title-ornament" src="./Pics/Ornup.png" alt="">
+            <h1>Categories</h1>
+            <img class="Title-ornament" src="./Pics/Orn.png" alt="">
+        </div>
+        <div class="Cat">
+            <a href="./SampleCategory.html" target="_blank">Fiction</a>
+            <a href="./SampleCategory.html" target="_blank">Non-Fiction</a>
+            <a href="./SampleCategory.html" target="_blank">Science</a>
+            <a href="./SampleCategory.html" target="_blank">Fantasy</a>
+            <a href="./SampleCategory.html" target="_blank">History</a>
+            <a href="./SampleCategory.html" target="_blank">Romance</a>
+            <a href="./SampleCategory.html" target="_blank">Mystery</a>
+            <a href="./SampleCategory.html" target="_blank">Biography</a>
+            <a href="./SampleCategory.html" target="_blank">Fiction</a>
+            <a href="./SampleCategory.html" target="_blank">Non-Fiction</a>
+            <a href="./SampleCategory.html" target="_blank">Science</a>
+            <a href="./SampleCategory.html" target="_blank">Fantasy</a>
+            <a href="./SampleCategory.html" target="_blank">History</a>
+            <a href="./SampleCategory.html" target="_blank">Romance</a>
+            <a href="./SampleCategory.html" target="_blank">Mystery</a>
+            <a href="./SampleCategory.html" target="_blank">Biography</a>
+            <a href="./SampleCategory.html" target="_blank">Fiction</a>
+            <a href="./SampleCategory.html" target="_blank">Non-Fiction</a>
+            <a href="./SampleCategory.html" target="_blank">Science</a>
+            <a href="./SampleCategory.html" target="_blank">Fantasy</a>
+            <a href="./SampleCategory.html" target="_blank">History</a>
+            <a href="./SampleCategory.html" target="_blank">Romance</a>
+            <a href="./SampleCategory.html" target="_blank">Mystery</a>
+            <a href="./SampleCategory.html" target="_blank">Biography</a>
+            <a href="./SampleCategory.html" target="_blank">Fiction</a>
+            <a href="./SampleCategory.html" target="_blank">Non-Fiction</a>
+            <a href="./SampleCategory.html" target="_blank">Science</a>
+            <a href="./SampleCategory.html" target="_blank">Fantasy</a>
+            <a href="./SampleCategory.html" target="_blank">History</a>
+            <a href="./SampleCategory.html" target="_blank">Romance</a>
+            <a href="./SampleCategory.html" target="_blank">Mystery</a>
+            <a href="./SampleCategory.html" target="_blank">Biography</a>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
