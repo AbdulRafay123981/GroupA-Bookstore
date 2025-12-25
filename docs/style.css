@@ -31,11 +31,23 @@ nav {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+nav a {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+}
+
 #Logo {
     padding: 25px;
     font-weight: bold;
     color: white;
+    font-family: 'Berlin Sans FB Demi', sans-serif;
 }
+
+#menu-toggle,.hamburger,.close {
+    display: none;
+}
+
 
 #RightNav {
     display: flex;
@@ -51,6 +63,7 @@ nav {
     padding: 15px;
     z-index: 2;
     color: #e58817;
+    
 }
 
 .NavI:hover {
@@ -126,13 +139,8 @@ nav {
 }
 
 #Head {
-    background-image: url(./Pics/BG\ Img.png);
-    height: 700px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 0;
+    margin-top: 20%;
+    margin-left: 10%;
     padding-top: 70px;
 }
 
@@ -140,14 +148,13 @@ nav {
 .Text {
     position: relative;
     z-index: 10;
+
 }
 
 .Text h1 {
 
     color: #e58817;
     font-family: 'Berlin Sans FB Demi', sans-serif;
-    margin-top: 30%;
-    margin-left: 20%;
     text-shadow: 21px 1px 50px rgba(0, 0, 0, 1);
     font-size: 50px;
 }
@@ -155,11 +162,10 @@ nav {
 .Text p {
     z-index: 2;
     color: white;
-    margin-left: 20%;
-    font-family: "Poppins", sans-serif;
-    font-weight: light;
-    font-style: italic;
-    font-size: 20px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-size: large;
+    font-style: normal;
 }
 
 .Image {
@@ -169,81 +175,103 @@ nav {
 
 body {
     background-color: #043140;
-}
-
-.band {
-    height: 500px;
-    width: 1684px;
-    background-color: #e58817;
-    background-image: url(./Pics/Library.jpg);
+    background-image: url(./Pics/BG\ Img.png);
+    background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
 }
 
-.Bod {
-    display: block;
-    background-color: #043140;
-    height: 450px;
+/* Responiveness */
+
+@media (max-width:995px) {
+
+    nav {
+        background-color: wheat;
+    }
+
+    #Typehere {
+        display: none;
+    }
 }
 
-.inf {
-    display: inline-flex;
-    margin-bottom: 10%;
-}
 
-#im {
-    margin-left: 10%;
-    margin-top: 5%;
-}
+@media (max-width: 750px) {
+    nav {
+        justify-content: space-between; 
+        align-items: center;
+        padding: 0 20px;
+        background-color: green;
+    }
 
-.boxes {
-    height: 300px;
-    width: 200px;
-    margin-left: 5%;
-    position: absolute;
-}
+    .hamburger {
+        display: block;
+        color: #e58817;
+        font-size: 30px;
+        cursor: pointer;
+        padding: 15px;
+    }
+    .hamburger:hover {
+        
+        color: wheat;
+    
+    }
+    .close {
+        
+        color: #e58817;
+        font-size: 50px;
+        cursor: pointer;
+        padding: 15px;
+    }
+    .close:hover{
+        
+        color: wheat;
+    }
 
-#box1 {
-    background-color: white;
-    border-radius: 23px 23px 23px 23px;
-    -webkit-border-radius: 23px 23px 23px 23px;
-    -moz-border-radius: 23px 23px 23px 23px;
-    transform: rotate(45deg);
-}
 
-#box2 {
-    background-color: #e58817;
-    border-radius: 23px 23px 23px 23px;
-    -webkit-border-radius: 23px 23px 23px 23px;
-    -moz-border-radius: 23px 23px 23px 23px;
-    transform: rotate(30deg);
-}
+    #RightNav {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 100%; 
+        left: 0;
+        width: 100%;
+        background-color: #043140; 
+        padding: 20px 0;
+        margin-right: 0;
+        border-bottom: 2px solid #e58817;
+    }
 
-#box3 {
-    background-color: lightblue;
-    border-radius: 23px 23px 23px 23px;
-    -webkit-border-radius: 23px 23px 23px 23px;
-    -moz-border-radius: 23px 23px 23px 23px;
-    transform: rotate(-60deg);
-}
+    #menu-toggle:checked ~ #RightNav {
+        display: flex;
+    }
+    #menu-toggle:checked ~ .hamburger {
+        display: none;
+    }
+    #menu-toggle:checked ~ .close {
+        display: flex;
+    }
 
-#box4 {
-    background-color: white;
-    border-radius: 23px 23px 23px 23px;
-    -webkit-border-radius: 23px 23px 23px 23px;
-    -moz-border-radius: 23px 23px 23px 23px;
-    transform: rotate(10deg);
-}
+    .NavI {
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+    }
+    .NavI:hover {
+        border: solid 1px white;
+    }
 
-#box5 {
-    position: absolute;
-    margin-left: 2%;
-    margin-top: 1%;
-}
+    #Search {
+        justify-content: center;
+        margin: 10px 0;
+    }
 
-.Para {
-    color: #dcc4a7;
-    font-size: 40px;
-    margin-left: 30%;
-    margin-top: 10%;
+    #Typehere {
+        display: block !important; 
+        width: 80%;
+    }
+
+    #Op6 {
+        width: fit-content;
+        margin: 10px auto;
+        padding: 10px 30px;
+    }
 }

@@ -8,21 +8,27 @@
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.cdnfonts.com/css/berlin-sans-fb-demi" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ephesis&family=Poppins:ital,wght@0,100;0,200;1,100;1,500;1,700&display=swap" rel="stylesheet">
-                
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <nav>
         <p id="Logo">Bookistan</p>
+
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+        <label for="menu-toggle" class="close">&times;</label>
+
         <div id="RightNav">
             <a id="Op1" class="NavI" href="./index.html">Home</a>
             <a id="Op2" class="NavI" href="./index.html">Books</a>
             <a id="Op3" class="NavI" href="./index.html">About Us</a>
             <a id="Op4" class="NavI" href="./index.html">Blog</a>
             <div id="Search">
-                <input type="text" placeholder="Type here...">
+                <input type="text" placeholder="Type here..." id="Typehere">
                 <button type="submit">
                     <img id="Op5" src="./Pics/Search.png" alt="Search">
                 </button>
@@ -31,32 +37,17 @@
         </div>
     </nav>
     <div id="T"></div>
-    <div id="Head"> 
+    <div id="Head">
         <div class="Text">
             <h1>A PLACE FOR CURIOUS MINDES</h1>
             <p>Discover Ideas worth your time</p>
         </div>
-        <div class="Image">
-            <img src="./Pics/Book Cover.png" alt="" height="500px" >
-        </div>
     </div>
-    <div class="band"></div>
-    <div class="Bod">
-        <div class="inf" class="inf1">
-        <div id="im">
-            <div id="box1" class="boxes"></div>
-            <div id="box2" class="boxes"></div>
-            <div id="box3" class="boxes"></div>
-            <div id="box4" class="boxes"></div>
-            <img  id="box5" clas="boxes" src="./Pics/BookPile.png" alt="" height="200px">
-        </div>
-        <div class="inf">
-            
-        </div>
-    
-      
+
+
+
     </div>
-    
+
 </body>
 
 </html>
