@@ -1,9 +1,15 @@
+body {
+    background-color: #043140;
+}
+
 .CardsAT {
     display: flex;
     overflow: none;
     flex-wrap: wrap;
     gap: 20px;
     flex-direction: row;
+    margin-left: 7%;
+    margin-top: 7%;
 }
 
 .CardsAT .cardA {
