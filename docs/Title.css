@@ -12,10 +12,17 @@
     background-image: url(./Pics/Library.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    color: white;
+
+    color: #F6F0D7;
     padding: 5%;
 
 }
+
+/*
+color: #89986D;
+color: #9CAB84;
+color: #C5D89D;
+*/
 
 .bod h1 {
     justify-self: center;

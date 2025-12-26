@@ -1,74 +1,147 @@
 body {
-    background-color: #043140;
+    background: linear-gradient(135deg, #F6F0D7 0%, #C5D89D 100%);
+    font-family: 'Roboto Condensed', sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
 }
 
 .CardsAT {
     display: flex;
-    overflow: none;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 25px;
     flex-direction: row;
-    margin-left: 7%;
-    margin-top: 7%;
+    justify-content: center;
+    margin: 40px auto;
+    max-width: 1200px;
 }
 
 .CardsAT .cardA {
     flex: 0 0 auto;
     width: 280px;
-    background-color: black;
-    color: white;
-    border-radius: 16px;
+    background-color: #FFFFFF;
+    color: #043140;
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 25px rgba(137, 152, 109, 0.15);
     text-align: center;
-    padding: 20px 15px;
-    transition: transform 0.3s, box-shadow 0.3s;
-
+    padding: 25px 20px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    border: 2px solid transparent;
 }
 
 .cardA:hover {
-    background-color: gray;
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(174, 174, 174, 0.25);
+    background-color: #FFFFFF;
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(137, 152, 109, 0.25);
+    border-color: #C5D89D;
+}
+
+.cardA::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, #C5D89D, #9CAB84, #89986D);
+    border-radius: 20px 20px 0 0;
 }
 
 .profile-img {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     object-fit: cover;
-    margin: 0 auto 15px auto;
-    border: 4px solid #e58817;
+    margin: 10px auto 20px auto;
+    border: 5px solid #C5D89D;
+    box-shadow: 0 8px 20px rgba(197, 216, 157, 0.4);
+    background: linear-gradient(135deg, #C5D89D, #9CAB84);
+    padding: 4px;
+    transition: transform 0.4s ease;
+}
+
+.cardA:hover .profile-img {
+    transform: scale(1.05);
+    border-color: #89986D;
 }
 
 .card-contentA h2 {
     font-family: 'Roboto Condensed', sans-serif;
-    margin: 10px 0 8px 0;
-    font-size: 20px;
+    margin: 15px 0 10px 0;
+    font-size: 22px;
     text-transform: uppercase;
+    color: #043140;
+    letter-spacing: 1.2px;
+    font-weight: 700;
 }
 
-.card-contentA p {
-    font-size: 14px;
+.card-contentA .role {
+    color: #89986D;
+    font-weight: 600;
+    margin-bottom: 12px;
+    font-size: 16px;
+    padding: 5px 15px;
+    background: linear-gradient(to right, #C5D89D30, #9CAB8430);
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.card-contentA .description {
+    color: #043140;
     opacity: 0.85;
-    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    padding: 0 10px;
 }
 
 .button {
     display: inline-flex;
     align-items: center;
-    gap: 5px;
-    padding: 8px 16px;
-    background-color: #e58817;
-    color: white;
-    border-radius: 40px;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 28px;
+    background: linear-gradient(135deg, #C5D89D, #9CAB84);
+    color: #043140;
+    border-radius: 50px;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
     transition: all 0.3s ease;
+    border: 2px solid transparent;
+    font-size: 15px;
+    box-shadow: 0 4px 15px rgba(137, 152, 109, 0.2);
+    margin-top: 10px;
+    min-width: 160px;
 }
 
 .button:hover {
-    background-color: #043140;
-    color: white;
-    transform: scale(1.05);
+    background: linear-gradient(135deg, #FFFFFF, #F6F0D7);
+    color: #043140;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(137, 152, 109, 0.3);
+    border-color: #C5D89D;
+}
+
+.button:active {
+    transform: translateY(-1px);
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .CardsAT {
+        margin: 20px;
+        gap: 20px;
+    }
+    
+    .CardsAT .cardA {
+        width: 100%;
+        max-width: 320px;
+    }
+    
+    .page-header h1 {
+        font-size: 32px;
+    }
 }
