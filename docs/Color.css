@@ -1,0 +1,137 @@
+/* ==========================
+   BODY
+   ========================== */
+body {
+    background-color: #F3EEDC; /* Warm Cream */
+}
+
+/* ==========================
+   NAVBAR & TITLE COLORS ONLY
+   ========================== */
+.bg-teal { background-color: #082E34; }
+.bg-sage { background-color: #CDE0B4; }
+.bg-cream { background-color: #F3EEDC; }
+.bg-gold { background-color: #D6B66A; }
+.bg-ink { background-color: #0E2A2D; }
+.bg-dark { background-color: #163235; }
+
+.text-teal { color: #082E34; }
+.text-sage { color: #CDE0B4; }
+.text-cream { color: #F3EEDC; }
+.text-gold { color: #D6B66A; }
+.text-ink { color: #0E2A2D; }
+.text-dark { color: #163235; }
+.text-white { color: #ffffff; }
+
+/* ==========================
+   CARDS
+   ========================== */
+.cards .card {
+    background-color: #F3EEDC; /* Warm Cream */
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cards .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.18);
+}
+
+.card-content h2 {
+    background-color: #CDE0B4;
+    color: #082E34; /* Deep Library Teal */
+}
+
+.card-content p {
+    background-color: #F3EEDC;
+    color: #0E2A2D; /* Ink */
+}
+
+/* ==========================
+   CATEGORY CARDS
+   ========================== */
+.cate .card {
+    border-left: 6px solid #D6B66A; /* Antique Gold accent */
+    padding-left: 14px;
+}
+
+/* ==========================
+   AUTHORS SECTION
+   ========================== */
+
+
+.CardsA .cardA {
+    background-color: #F3EEDC; /* Warm Cream */
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    padding: 12px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.CardsA .cardA:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 35px rgba(0,0,0,0.15);
+}
+
+.card-contentA h2 {
+    color: #082E34; /* Deep Library Teal */
+}
+
+.card-contentA p {
+    color: #0E2A2D; /* Ink */
+}
+
+.Authors {
+    background-color: #082E34;
+    border-radius: 50px;
+}
+.Authors .topline {
+    color: #F3EEDC;
+}
+
+/* ==========================
+   BUTTONS
+   ========================== */
+.button {
+    background-color: #D6B66A; /* Antique Gold */
+    color: #0E2A2D; /* Ink */
+    padding: 8px 18px;
+    border-radius: 999px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* ==========================
+   SEARCH BOX
+   ========================== */
+#Search input[type="text"] {
+    background-color: #F3EEDC; /* Warm Cream */
+    border: 2px solid #082E34; /* Deep Library Teal */
+    color: #0E2A2D; /* Ink */
+}
+
+#Search button {
+    background-color: #082E34; /* Deep Library Teal */
+    border: none;
+}
+
+/* ==========================
+   BORDERS & SHADOWS CLASSES
+   ========================== */
+.border-gold-left { border-left: 6px solid #D6B66A; }
+.shadow-light { box-shadow: 0 10px 25px rgba(0,0,0,0.08); }
+.shadow-dark { box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
+.hover-up { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+.hover-up:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.18); }
+
+

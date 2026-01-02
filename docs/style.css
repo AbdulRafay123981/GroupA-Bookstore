@@ -1,49 +1,171 @@
-/*Body*/
-
-#Head {
-    margin-top: 20%;
-    margin-left: 10%;
-    padding-top: 70px;
+/* Simple Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-
-.Text {
-    position: relative;
-    z-index: 10;
-
-}
-
-.Text h1 {
-
-    color: #89986D;
-    font-family: 'Berlin Sans FB Demi', sans-serif;
-    text-shadow: 21px 1px 50px rgba(0, 0, 0, 1);
-    font-size: 50px;
-}
-
-.Text p {
-    z-index: 2;
-    color: #F6F0D7;
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 400;
-    font-size: large;
-    font-style: normal;
-}
-
-.Image {
-    margin-top: 10%;
-    margin-left: 30%;
-}
-
+/* Body with simple background */
 body {
-    background-color: #89986D;
-    background-image: url(./Pics/BG\ Img.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #F5F1E8; /* Parchment */
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    position: relative;
 }
 
-/*   color: #89986D;
-    color: #9CAB84;
-    color: #C5D89D;
-    color: #F6F0D7;
-    */
+/* Adjust spacer for fixed navbar - Reduced from 80px to 60px */
+#T {
+    height: 60px; /* Match the navbar height */
+}
+
+/* Hero Section - Adjusted for better spacing */
+#Head {
+    margin-top: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px 10%;
+    min-height: calc(100vh - 60px); /* Adjusted to 60px to match navbar */
+    background: linear-gradient(135deg, #2C1810 0%, #2C1810 40%, #5F8D4E 100%);
+    border-radius: 0 0 30px 30px;
+    box-shadow: 0 10px 30px rgba(44, 24, 16, 0.2);
+}
+
+/* Text Container */
+.Text {
+    background-color: rgba(245, 241, 232, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 650px;
+    border: 2px solid #8B4513;
+    box-shadow: 0 10px 25px rgba(44, 24, 16, 0.3);
+}
+
+/* Main Heading */
+.Text h1 {
+    font-family: 'Merriweather', serif;
+    font-weight: 900;
+    font-size: 2.8rem;
+    color: #2C1810;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+/* Subheading */
+.Text p {
+    font-size: 1.3rem;
+    color: #5F8D4E;
+    font-weight: 600;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+/* Animation for fade-in-tl */
+.fade-in-tl {
+    -webkit-animation: fade-in-tl 0.4s ease-out 0.2s both;
+    animation: fade-in-tl 0.4s ease-out 0.2s both;
+}
+
+/* Animation for tracking-in-expand */
+.tracking-in-expand {
+    -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.4s both;
+    animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.4s both;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    #Head {
+        padding: 15px 8%;
+    }
+    
+    .Text {
+        max-width: 600px;
+        padding: 25px;
+    }
+    
+    .Text h1 {
+        font-size: 2.5rem;
+    }
+    
+    .Text p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 992px) {
+    #Head {
+        padding: 15px 5%;
+    }
+    
+    .Text {
+        max-width: 550px;
+        padding: 22px;
+    }
+    
+    .Text h1 {
+        font-size: 2.2rem;
+    }
+    
+    .Text p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #T {
+        height: 55px; /* Match mobile navbar height */
+    }
+    
+    #Head {
+        padding: 20px;
+        min-height: calc(100vh - 55px); /* Adjusted for mobile navbar */
+        text-align: center;
+        justify-content: center;
+        border-radius: 0 0 20px 20px;
+    }
+    
+    .Text {
+        padding: 20px;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    
+    .Text h1 {
+        font-size: 2rem;
+    }
+    
+    .Text p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #T {
+        height: 50px; /* Smaller on very small screens */
+    }
+    
+    #Head {
+        padding: 15px;
+        min-height: calc(100vh - 50px);
+    }
+    
+    .Text {
+        padding: 18px;
+        width: 100%;
+    }
+    
+    .Text h1 {
+        font-size: 1.8rem;
+    }
+    
+    .Text p {
+        font-size: 1rem;
+    }
+}
+
+
+/* Add smooth transition for better visual */
+#Head {
+    transition: all 0.3s ease;
+}

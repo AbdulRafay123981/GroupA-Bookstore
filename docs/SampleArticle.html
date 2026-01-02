@@ -7,20 +7,16 @@
     <title>Bookistan</title>
     <link rel="stylesheet" href="./Nav.css">
     <link rel="stylesheet" href="./Title.css">
-    <link href="https://fonts.cdnfonts.com/css/berlin-sans-fb-demi" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" type="image/x-icon" href="./Pics/Logo.png">
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
-        rel="stylesheet">
 </head>
 <style>
     body {
-        background-color: #F6F0D7;
-        color: #043140;
-        font-family: 'Ubuntu', sans-serif;
+        background-color: #F5F1E8;
+        color: #2C1810;
+        font-family: 'Inter', sans-serif;
+        margin: 0;
+        padding: 0;
     }
 
     .Art {
@@ -29,113 +25,307 @@
         margin: 60px auto;
         padding: 60px 70px;
         background-color: #FFFFFF;
-        color: #043140;
-        border-radius: 40px;
-        box-shadow: 0 12px 40px rgba(137, 152, 109, 0.15);
-        font-family: 'Ubuntu', sans-serif;
+        color: #333333;
+        border-radius: 20px;
+        box-shadow: 0 15px 35px rgba(44, 24, 16, 0.15);
+        border: 3px solid #8B4513;
         line-height: 1.8;
-        border: 3px solid #F6F0D7;
+        z-index: 1;
     }
 
-    .article-content {
-        margin: 20px;
+    .Art::before {
+        content: '📖';
+        position: absolute;
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #F5F1E8;
+        color: #8B4513;
+        padding: 0 15px;
+        font-size: 24px;
+        z-index: 2;
+    }
+
+    .article-header {
+        text-align: center;
+        margin-bottom: 40px;
+        padding-bottom: 25px;
+        border-bottom: 2px solid rgba(139, 69, 19, 0.2);
+    }
+
+    .article-header h1 {
+        font-family: 'Merriweather', serif;
+        font-size: 36px;
+        color: #2C1810;
+        font-weight: 900;
+        margin-bottom: 15px;
+        line-height: 1.3;
     }
 
     .article-meta {
-        text-align: center;
-        color: #89986D;
-    }
-
-    /* Corner images */
-    .Art .corner {
-        position: absolute;
-        width: 160px;
-        opacity: 0.7;
-        pointer-events: none;
-        /* decorative only */
-    }
-
-    .corner-top-left {
-        top: 15px;
-        right: 25px;
-    }
-
-    .corner-bottom-right {
-        bottom: 20px;
-        left: 20px;
-    }
-
-    /* Text styling */
-    .Art p {
+        color: #5F8D4E;
         font-size: 16px;
-        margin-bottom: 22px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+    }
+
+    .article-content {
+        margin: 20px 0;
+    }
+
+    .Art p {
+        font-size: 17px;
+        margin-bottom: 25px;
         position: relative;
         z-index: 1;
-        color: #043140;
+        color: #333333;
+        line-height: 1.7;
     }
 
     .Art .closing {
         text-align: center;
         font-weight: 600;
         margin-top: 30px;
-        color: #89986D;
+        color: #5F8D4E;
+        font-size: 18px;
+        padding: 15px;
+        background-color: rgba(95, 141, 78, 0.1);
+        border-radius: 12px;
+        border-left: 4px solid #5F8D4E;
     }
 
-    /* Mobile adjustment */
+    .Art .corner {
+        position: absolute;
+        width: 160px;
+        opacity: 0.7;
+        pointer-events: none;
+        filter: brightness(0) invert(1);
+    }
+
+    .corner-top-left {
+        top: 15px;
+        right: 25px;
+        transform: rotate(90deg);
+    }
+
+    .corner-bottom-right {
+        bottom: 20px;
+        left: 20px;
+        transform: rotate(-90deg);
+    }
+
+    .quote {
+        font-family: 'Merriweather', serif;
+        font-size: 20px;
+        font-style: italic;
+        color: #8B4513;
+        padding: 25px 40px;
+        margin: 30px 0;
+        background-color: rgba(245, 241, 232, 0.7);
+        border-radius: 12px;
+        border-left: 5px solid #5F8D4E;
+        text-align: center;
+        line-height: 1.6;
+        box-shadow: 0 5px 15px rgba(44, 24, 16, 0.05);
+    }
+
+    .article-footer {
+        margin-top: 40px;
+        padding-top: 25px;
+        border-top: 2px solid rgba(139, 69, 19, 0.2);
+        text-align: center;
+    }
+
+    .tags {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+
+    .tag {
+        padding: 8px 16px;
+        background-color: rgba(139, 69, 19, 0.1);
+        color: #8B4513;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+    .tag:hover {
+        background-color: rgba(95, 141, 78, 0.2);
+        color: #5F8D4E;
+        transform: translateY(-2px);
+    }
+
+    .read-more {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 12px 30px;
+        background-color: #2C1810;
+        color: #F5F1E8;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 600;
+        font-family: 'Inter', sans-serif;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+        font-size: 16px;
+    }
+
+    .read-more:hover {
+        background-color: #8B4513;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(44, 24, 16, 0.2);
+    }
+
+    @media (max-width: 1200px) {
+        .Art {
+            max-width: 800px;
+        }
+    }
+
+    @media (max-width: 992px) {
+        .Art {
+            padding: 50px 40px;
+            margin: 50px 30px;
+        }
+
+        .article-header h1 {
+            font-size: 32px;
+        }
+
+        .quote {
+            font-size: 18px;
+            padding: 20px 30px;
+        }
+    }
+
     @media (max-width: 768px) {
+        body {
+            padding-top: 55px;
+        }
+
         .Art {
             padding: 40px 30px;
             margin: 40px 20px;
-            border-radius: 30px;
+            border-radius: 15px;
+        }
+
+        .article-header h1 {
+            font-size: 28px;
+        }
+
+        .article-meta {
+            font-size: 15px;
+        }
+
+        .Art p {
+            font-size: 16px;
+            line-height: 1.6;
         }
 
         .Art .corner {
-            width: 120px;
-            opacity: 0.6;
+            width: 100px;
+            opacity: 0.5;
+        }
+
+        .quote {
+            font-size: 17px;
+            padding: 18px 25px;
         }
     }
 
     @media (max-width: 600px) {
         .Art {
-            padding: 30px 25px;
+            padding: 35px 25px;
             margin: 30px 15px;
-            border-radius: 25px;
         }
 
-        .Art .corner {
-            width: 90px;
-            opacity: 0.5;
+        .article-header h1 {
+            font-size: 26px;
+        }
+
+        .article-meta {
+            font-size: 14px;
         }
 
         .Art p {
             font-size: 15px;
-            margin-bottom: 18px;
-            line-height: 1.7;
         }
 
-        .Art .closing {
+        .Art .corner {
+            width: 80px;
+        }
+
+        .quote {
+            font-size: 16px;
+            padding: 15px 20px;
+        }
+
+        .tags {
+            gap: 8px;
+        }
+
+        .tag {
+            padding: 6px 12px;
+            font-size: 12px;
+        }
+
+        .read-more {
+            padding: 10px 25px;
             font-size: 15px;
-            margin-top: 25px;
         }
     }
 
     @media (max-width: 480px) {
         .Art {
-            padding: 25px 20px;
+            padding: 30px 20px;
             margin: 20px 10px;
-            border-radius: 20px;
+            border-radius: 12px;
         }
 
-        .Art .corner {
-            width: 70px;
+        .article-header h1 {
+            font-size: 24px;
         }
 
         .Art p {
             font-size: 14px;
         }
 
-        .article-content {
-            margin: 10px;
+        .Art .corner {
+            width: 60px;
+            display: none;
+        }
+
+        .quote {
+            font-size: 15px;
+            padding: 12px 18px;
+            margin: 20px 0;
+        }
+
+        .read-more {
+            padding: 10px 20px;
+            font-size: 14px;
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    @media (max-width: 360px) {
+        .Art {
+            padding: 25px 15px;
+        }
+
+        .article-header h1 {
+            font-size: 22px;
+        }
+
+        .article-meta {
+            font-size: 13px;
         }
     }
 </style>
@@ -211,6 +401,15 @@
                     At Bookistan, we celebrate reading not just as a hobby, but as a lifelong
                     journey. One book at a time, we invite you to explore, learn, and dream.
                 </p>
+            </div>
+            <div class="article-footer">
+                <div class="tags">
+                    <a href="#" class="tag">Reading</a>
+                    <a href="#" class="tag">Books</a>
+                    <a href="#" class="tag">Literature</a>
+                    <a href="#" class="tag">Education</a>
+                </div>
+                <a href="./Blog.html" class="read-more">Read More Articles</a>
             </div>
             <img src="./Pics/Corner2.png" class="corner corner-bottom-right" alt="">
 

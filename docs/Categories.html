@@ -7,91 +7,199 @@
     <title>Bookistan</title>
     <link rel="stylesheet" href="./Nav.css">
     <link rel="stylesheet" href="./Title.css">
-    <link href="https://fonts.cdnfonts.com/css/berlin-sans-fb-demi" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" type="image/x-icon" href="./Pics/Logo.png">
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
-        rel="stylesheet">
+
     <style>
         body {
-            background-color: #F6F0D7;
+            background-color: #F5F1E8;
+            /* Parchment background */
+            font-family: 'Inter', sans-serif;
+            color: #333333;
+            margin: 0;
+            padding: 0;
         }
 
         .Cat {
             margin-top: 40px;
-            padding: 20px;
+            padding: 40px 10%;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
             width: 100%;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .Cat a {
             display: block;
-            padding: 18px 20px;
+            padding: 20px 25px;
             background-color: #FFFFFF;
-            color: #043140;
+            color: #2C1810;
+            /* Dark Brown text */
             text-decoration: none;
             text-align: center;
-            font-family: 'Ubuntu', sans-serif;
+            font-family: 'Inter', sans-serif;
             font-size: 16px;
             font-weight: 600;
-            border-radius: 20px;
-            box-shadow: 0 6px 20px rgba(137, 152, 109, 0.15);
-            border: 2px solid #F6F0D7;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(44, 24, 16, 0.1);
+            border: 2px solid #8B4513;
+            /* Saddle Brown border */
             transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
 
         .Cat a:hover {
-            background-color: #C5D89D;
-            color: #043140;
-            transform: translateY(-6px) scale(1.03);
-            box-shadow: 0 12px 30px rgba(197, 216, 157, 0.35);
-            border-color: #9CAB84;
+            background-color: #5F8D4E;
+            /* Muted Green */
+            color: #FFFFFF;
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 12px 25px rgba(95, 141, 78, 0.3);
+            border-color: #4A6F3A;
+            /* Darker Green */
         }
 
         .Cat a:active {
-            transform: scale(0.96);
+            transform: scale(0.98);
+        }
+
+        /* Add decorative book icon before each category */
+        .Cat a::before {
+            content: '📚';
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            font-size: 14px;
+            opacity: 0.5;
+            transition: opacity 0.3s ease;
+        }
+
+        .Cat a:hover::before {
+            opacity: 0.8;
+            color: #F5F1E8;
+        }
+
+        /* Add subtle gradient background pattern to body */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                radial-gradient(circle at 20% 80%, rgba(139, 69, 19, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(95, 141, 78, 0.03) 0%, transparent 50%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .Cat {
+                padding: 40px 8%;
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .Cat {
+                padding: 40px 5%;
+                grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+                gap: 18px;
+            }
+
+            .Cat a {
+                padding: 18px 20px;
+                font-size: 15px;
+            }
         }
 
         @media (max-width: 768px) {
             .Cat {
+                margin-top: 30px;
+                padding: 30px 4%;
                 grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
                 gap: 16px;
-                padding: 15px;
+            }
+
+            .Cat a {
+                padding: 16px 18px;
+                font-size: 14px;
+                border-radius: 10px;
             }
         }
 
         @media (max-width: 600px) {
             .Cat {
-                gap: 12px;
-                margin-top: 30px;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 14px;
+                padding: 30px 3%;
             }
 
             .Cat a {
-                font-size: 14px;
-                padding: 14px;
+                padding: 15px 12px;
+                font-size: 13px;
+            }
+
+            .Cat a::before {
+                display: none;
+                /* Hide book icon on small screens */
             }
         }
 
         @media (max-width: 480px) {
             .Cat {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 10px;
-                padding: 10px;
+                gap: 12px;
+                padding: 25px 3%;
             }
 
             .Cat a {
-                font-size: 13px;
-                padding: 12px 10px;
-                border-radius: 15px;
+                padding: 14px 10px;
+                font-size: 12px;
+                border-radius: 8px;
             }
         }
-    </style>
 
+        @media (max-width: 360px) {
+            .Cat {
+                gap: 10px;
+                padding: 20px 2%;
+            }
+
+            .Cat a {
+                padding: 12px 8px;
+                font-size: 11px;
+            }
+        }
+
+        /* Add category count badge */
+        .Cat a::after {
+            content: '';
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            width: 6px;
+            height: 6px;
+            background-color: #5F8D4E;
+            border-radius: 50%;
+            opacity: 0.5;
+            transition: all 0.3s ease;
+        }
+
+        .Cat a:hover::after {
+            opacity: 0.8;
+            background-color: #F5F1E8;
+            transform: scale(1.2);
+        }
+
+        
+    </style>
 </head>
 
 <body>
