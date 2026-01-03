@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookistan</title>
+    <link rel="stylesheet" href="./Nav.css">
+    <link rel="stylesheet" href="./Title.css">
+    <link rel="icon" type="image/x-icon" href="./Pics/Logo.png">
+</head>
+<style>
+    body {
+        background-color: #F5F1E8;
+        font-family: 'Inter', sans-serif;
+        color: #333333;
+        margin: 0;
+        padding: 60px 20px 20px 20px;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .author-card {
+        display: flex;
+        flex-wrap: wrap;
+        width: 1000px;
+        max-width: 90%;
+        background-color: #FFFFFF;
+        border-radius: 20px;
+        padding: 40px;
+        box-shadow: 0 15px 35px rgba(44, 24, 16, 0.15);
+        border: 3px solid #8B4513;
+        margin: 20px;
+        gap: 40px;
+        position: relative;
+    }
+
+    .author-card::before {
+        content: '✍️';
+        position: absolute;
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #F5F1E8;
+        color: #8B4513;
+        padding: 0 15px;
+        font-size: 24px;
+        z-index: 1;
+    }
+
+    .author-img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 50%;
+        flex-shrink: 0;
+        border: 4px solid #5F8D4E;
+        box-shadow: 0 10px 25px rgba(95, 141, 78, 0.2);
+        transition: all 0.3s ease;
+    }
+
+    .author-img:hover {
+        transform: scale(1.05);
+        border-color: #4A6F3A;
+        box-shadow: 0 15px 35px rgba(95, 141, 78, 0.3);
+    }
+
+    .author-info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        min-width: 300px;
+    }
+
+    .author-info h1 {
+        margin: 0;
+        font-size: 36px;
+        color: #2C1810;
+        font-family: 'Merriweather', serif;
+        font-weight: 900;
+        line-height: 1.2;
+        margin-bottom: 10px;
+    }
+
+    .author-info h2 {
+        margin: 15px 0 5px 0;
+        font-size: 22px;
+        color: #8B4513;
+        font-family: 'Merriweather', serif;
+        font-weight: 700;
+        padding-bottom: 5px;
+        border-bottom: 2px solid rgba(139, 69, 19, 0.3);
+    }
+
+    .author-info p {
+        font-size: 16px;
+        line-height: 1.7;
+        color: #333333;
+        margin-bottom: 25px;
+    }
+
+    .author-books {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 15px;
+    }
+
+    .author-books a {
+        display: block;
+        transition: all 0.3s ease;
+    }
+
+    .author-books img {
+        width: 100px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(44, 24, 16, 0.1);
+        border: 2px solid #8B4513;
+        transition: all 0.3s ease;
+    }
+
+    .author-books a:hover img {
+        transform: translateY(-8px) scale(1.05);
+        box-shadow: 0 15px 30px rgba(44, 24, 16, 0.2);
+        border-color: #5F8D4E;
+    }
+
+    .author-stats {
+        display: flex;
+        gap: 30px;
+        margin: 20px 0;
+        padding: 20px;
+        background-color: rgba(245, 241, 232, 0.5);
+        border-radius: 12px;
+        border: 2px solid rgba(139, 69, 19, 0.2);
+    }
+
+    .stat {
+        text-align: center;
+        flex: 1;
+    }
+
+    .stat-number {
+        font-size: 28px;
+        font-weight: 700;
+        color: #5F8D4E;
+        font-family: 'Merriweather', serif;
+    }
+
+    .stat-label {
+        font-size: 12px;
+        color: #666666;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: 5px;
+    }
+
+    @media (max-width: 1200px) {
+        .author-card {
+            width: 90%;
+            max-width: 900px;
+        }
+    }
+
+    @media (max-width: 992px) {
+        .author-card {
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+            gap: 30px;
+        }
+
+        .author-img {
+            width: 250px;
+            height: 250px;
+        }
+
+        .author-info {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        body {
+            padding-top: 55px;
+        }
+
+        .author-card {
+            padding: 25px;
+            margin: 15px;
+            border-radius: 15px;
+        }
+
+        .author-img {
+            width: 200px;
+            height: 200px;
+        }
+
+        .author-info h1 {
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .author-info h2 {
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .author-info p {
+            text-align: center;
+            font-size: 15px;
+        }
+
+        .author-books {
+            justify-content: center;
+        }
+
+        .author-stats {
+            flex-direction: column;
+            gap: 15px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        body {
+            padding-top: 50px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .author-card {
+            padding: 20px;
+            margin: 10px;
+            border-radius: 12px;
+        }
+
+        .author-img {
+            width: 180px;
+            height: 180px;
+        }
+
+        .author-info h1 {
+            font-size: 26px;
+        }
+
+        .author-info h2 {
+            font-size: 18px;
+        }
+
+        .author-info p {
+            font-size: 14px;
+        }
+
+        .author-books img {
+            width: 80px;
+            height: 120px;
+        }
+
+        .stat-number {
+            font-size: 24px;
+        }
+    }
+
+    @media (max-width: 360px) {
+        .author-card {
+            padding: 15px;
+        }
+
+        .author-info h1 {
+            font-size: 24px;
+        }
+
+        .author-books img {
+            width: 70px;
+            height: 105px;
+        }
+    }
+</style>
+
+<body>
+    <nav class="swing-in-top-fwd">
+        <a href="./index.html" id="Logo">
+            <img src=" ./Pics/Logo.png" alt="">
+        </a>
+
+
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+        <label for="menu-toggle" class="close">&times;</label>
+
+        <div id="RightNav">
+            <a id="Op2" class="NavI" href="./index.html">Home</a>
+            <a id="Op1" class="NavI" href="./Books.html">Books</a>
+            <a id="Op3" class="NavI" href="./AboutUs.html">About Us</a>
+            <a id="Op4" class="NavI" href="./Blog.html">Blog</a>
+            <div id="Search">
+                <input type="text" placeholder="Type here..." id="Typehere">
+                <button type="submit">
+                    <img id="Op5" src="./Pics/Search.png" alt="Search">
+                </button>
+            </div>
+            <a id="Op6" class="NavI" href="./VisitUs.html">Visit Us</a>
+        </div>
+    </nav>
+
+    <div class="author-card">
+        <div class="author-stats">
+            <div class="stat">
+                <div class="stat-number">15</div>
+                <div class="stat-label">Books</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">2M+</div>
+                <div class="stat-label">Copies Sold</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">10</div>
+                <div class="stat-label">Awards</div>
+            </div>
+        </div>
+        <img src="./Pics/A1.jpg" alt="Author Photo" class="author-img">
+
+        <div class="author-info">
+            <h1>Willam UnshakensPeer</h1>
+            <h2>Biography</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam deserunt, hic cupiditate molestias
+                aliquam tempora, itaque omnis natus voluptas saepe facere inventore aspernatur voluptate. Sint, tempora
+                officiis! Atque, omnis! Lorem ipsum dolor sit amet consectetur.</p>
+
+            <h2>Books by this Author</h2>
+            <div class="author-books">
+                <a href="./SampleBook.html" target="_blank">
+                    <img src="./Pics/Book1.png" alt="Book 1"></a>
+                <a href="./SampleBook.html" target="_blank">
+                    <img src="./Pics/Book Cover.png" alt="Book 2"></a>
+                <a href="./SampleBook.html" target="_blank">
+                    <img src="./Pics/Book1.png" alt="Book 3"></a>
+                <!-- Add more book images -->
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

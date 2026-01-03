@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookistan</title>
+    <link rel="stylesheet" href="./Nav.css">
+    <link rel="stylesheet" href="./Title.css">
+    <link rel="icon" type="image/x-icon" href="./Pics/Logo.png">
+
+
+    <style>
+        body {
+            background-color: #F5F1E8;
+            /* Parchment background */
+            font-family: 'Inter', sans-serif;
+            color: #333333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .Cat {
+            margin-top: 40px;
+            padding: 40px 10%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            width: 100%;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .Cat a {
+            display: block;
+            padding: 20px 25px;
+            background-color: #FFFFFF;
+            color: #2C1810;
+            /* Dark Brown text */
+            text-decoration: none;
+            text-align: center;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(44, 24, 16, 0.1);
+            border: 2px solid #8B4513;
+            /* Saddle Brown border */
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .Cat a:hover {
+            background-color: #5F8D4E;
+            /* Muted Green */
+            color: #FFFFFF;
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 12px 25px rgba(95, 141, 78, 0.3);
+            border-color: #4A6F3A;
+            /* Darker Green */
+        }
+
+        .Cat a:active {
+            transform: scale(0.98);
+        }
+
+        /* Add decorative book icon before each category */
+        .Cat a::before {
+            content: '📚';
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            font-size: 14px;
+            opacity: 0.5;
+            transition: opacity 0.3s ease;
+        }
+
+        .Cat a:hover::before {
+            opacity: 0.8;
+            color: #F5F1E8;
+        }
+
+        /* Add subtle gradient background pattern to body */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                radial-gradient(circle at 20% 80%, rgba(139, 69, 19, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(95, 141, 78, 0.03) 0%, transparent 50%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .Cat {
+                padding: 40px 8%;
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .Cat {
+                padding: 40px 5%;
+                grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+                gap: 18px;
+            }
+
+            .Cat a {
+                padding: 18px 20px;
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .Cat {
+                margin-top: 30px;
+                padding: 30px 4%;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 16px;
+            }
+
+            .Cat a {
+                padding: 16px 18px;
+                font-size: 14px;
+                border-radius: 10px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .Cat {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 14px;
+                padding: 30px 3%;
+            }
+
+            .Cat a {
+                padding: 15px 12px;
+                font-size: 13px;
+            }
+
+            .Cat a::before {
+                display: none;
+                /* Hide book icon on small screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .Cat {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+                padding: 25px 3%;
+            }
+
+            .Cat a {
+                padding: 14px 10px;
+                font-size: 12px;
+                border-radius: 8px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .Cat {
+                gap: 10px;
+                padding: 20px 2%;
+            }
+
+            .Cat a {
+                padding: 12px 8px;
+                font-size: 11px;
+            }
+        }
+
+        /* Add category count badge */
+        .Cat a::after {
+            content: '';
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            width: 6px;
+            height: 6px;
+            background-color: #5F8D4E;
+            border-radius: 50%;
+            opacity: 0.5;
+            transition: all 0.3s ease;
+        }
+
+        .Cat a:hover::after {
+            opacity: 0.8;
+            background-color: #F5F1E8;
+            transform: scale(1.2);
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <nav class="swing-in-top-fwd">
+        <a href="./index.html" id="Logo">
+            <img src=" ./Pics/Logo.png" alt="">
+        </a>
+
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+        <label for="menu-toggle" class="close">&times;</label>
+
+        <div id="RightNav">
+            <a id="Op1" class="NavI" href="./index.html">Home</a>
+            <a id="Op2" class="NavI" href="./Books.html">Books</a>
+            <a id="Op3" class="NavI" href="./AboutUs.html">About Us</a>
+            <a id="Op4" class="NavI" href="./Blog.html">Blog</a>
+            <div id="Search">
+                <input type="text" placeholder="Type here..." id="Typehere">
+                <button type="submit">
+                    <img id="Op5" src="./Pics/Search.png" alt="Search">
+                </button>
+            </div>
+            <a id="Op6" class="NavI" href="./VisitUs.html">Visit Us</a>
+        </div>
+    </nav>
+    <div class="bod">
+        <div class="title">
+            <img class="Title-ornament" src="./Pics/Ornup.png" alt="">
+            <h1 class="tracking-in-expand">Categories</h1>
+            <img class="Title-ornament" src="./Pics/Orn.png" alt="">
+        </div>
+        <div class="Cat">
+            <a href="./Categories/Fiction.html" target="_blank">Fiction</a>
+            <a href="./Categories/Romance.html" target="_blank">Romance</a>
+            <a href="./Categories/Education.html" target="_blank">Education</a>
+            <a href="./Categories/Horror.html" target="_blank">Horror</a>
+            <a href="./Categories/Puzzels.html" target="_blank">Mystery</a>
+            <a href="./Categories/Fantasy.html" target="_blank">Fantasy</a>
+            <a href="./Categories/SciFy.html" target="_blank">Sci-Fi</a>
+            <a href="./Categories/Action.html" target="_blank">Action</a>
+    
+    </div>
+</body>
+
+</html>

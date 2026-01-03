@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookistan</title>
+    <link rel="stylesheet" href="./Nav.css">
+    <link rel="stylesheet" href="./Title.css">
+    <link rel="stylesheet" href="./Authors.css">
+    <link rel="icon" type="image/x-icon" href="./Pics/Logo.png">
+</head>
+<style>
+    body {
+        background-color: #F5F1E8;
+        color: #2C1810;
+        font-family: 'Inter', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .about-us {
+        position: relative;
+        max-width: 900px;
+        margin: 60px auto;
+        padding: 60px 70px;
+        background-color: #FFFFFF;
+        color: #333333;
+        border-radius: 20px;
+        box-shadow: 0 15px 35px rgba(44, 24, 16, 0.15);
+        border: 3px solid #8B4513;
+        line-height: 1.8;
+        z-index: 1;
+    }
+
+    .about-us::before {
+        content: '✦';
+        position: absolute;
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #F5F1E8;
+        color: #8B4513;
+        padding: 0 15px;
+        font-size: 24px;
+        z-index: 2;
+    }
+
+    .about-us .corner {
+        position: absolute;
+        width: 160px;
+        opacity: 0.7;
+        pointer-events: none;
+        filter: brightness(0) invert(1);
+    }
+
+    .corner-top-left {
+        top: 15px;
+        right: 25px;
+        transform: rotate(90deg);
+    }
+
+    .corner-bottom-right {
+        bottom: 20px;
+        left: 20px;
+        transform: rotate(-90deg);
+    }
+
+    .about-us p {
+        font-size: 16px;
+        margin-bottom: 22px;
+        position: relative;
+        z-index: 1;
+        color: #333333;
+    }
+
+    .about-us strong {
+        color: #2C1810;
+        font-weight: 700;
+    }
+
+    .about-us .closing {
+        text-align: center;
+        font-weight: 600;
+        margin-top: 30px;
+        color: #5F8D4E;
+        font-size: 18px;
+        padding: 15px;
+        background-color: rgba(95, 141, 78, 0.1);
+        border-radius: 12px;
+        border-left: 4px solid #5F8D4E;
+    }
+
+    .Authors {
+        padding: 60px 10%;
+        background-color: #F5F1E8;
+    }
+
+    .CardsAT {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 30px;
+        justify-content: center;
+        margin: 40px auto;
+        max-width: 1200px;
+        padding: 0 20px;
+    }
+
+    .CardsAT .cardA {
+        background-color: #FFFFFF;
+        color: #2C1810;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 8px 25px rgba(44, 24, 16, 0.1);
+        text-align: center;
+        padding: 25px 20px;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        position: relative;
+        border: 2px solid #8B4513;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+    }
+
+    .cardA:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 20px 40px rgba(44, 24, 16, 0.2);
+        border-color: #5F8D4E;
+    }
+
+    .cardA::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 6px;
+        background: linear-gradient(90deg, #8B4513, #5F8D4E);
+        border-radius: 16px 16px 0 0;
+    }
+
+    .profile-img {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 10px auto 20px auto;
+        border: 5px solid #8B4513;
+        box-shadow: 0 8px 20px rgba(139, 69, 19, 0.2);
+        background: linear-gradient(135deg, #F5F1E8, #FFFFFF);
+        padding: 4px;
+        transition: all 0.4s ease;
+    }
+
+    .cardA:hover .profile-img {
+        transform: scale(1.05);
+        border-color: #5F8D4E;
+        box-shadow: 0 10px 25px rgba(95, 141, 78, 0.3);
+    }
+
+    .card-contentA h2 {
+        font-family: 'Merriweather', serif;
+        margin: 15px 0 10px 0;
+        font-size: 22px;
+        color: #2C1810;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+    }
+
+    .card-contentA p {
+        color: #666666;
+        opacity: 0.9;
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        padding: 0 10px;
+        flex-grow: 1;
+    }
+
+    .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 12px 28px;
+        background-color: #5F8D4E;
+        color: #FFFFFF;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+        font-size: 15px;
+        box-shadow: 0 4px 15px rgba(95, 141, 78, 0.2);
+        margin-top: 10px;
+        min-width: 160px;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .button:hover {
+        background-color: #4A6F3A;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(95, 141, 78, 0.3);
+        border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .material-symbols-outlined {
+        font-size: 18px;
+        vertical-align: middle;
+    }
+
+    @media (max-width: 1200px) {
+        .CardsAT {
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+        }
+        
+        .about-us {
+            max-width: 800px;
+        }
+    }
+
+    @media (max-width: 992px) {
+        .CardsAT {
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 20px;
+            padding: 0 15px;
+        }
+        
+        .about-us {
+            padding: 40px;
+            margin: 40px 30px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        body {
+            padding-top: 55px;
+        }
+        
+        .about-us {
+            padding: 30px 25px;
+            margin: 40px 20px;
+            border-radius: 15px;
+        }
+        
+        .about-us .corner {
+            width: 100px;
+            opacity: 0.5;
+        }
+        
+        .about-us p {
+            font-size: 15px;
+            margin-bottom: 18px;
+            line-height: 1.7;
+        }
+        
+        .about-us .closing {
+            font-size: 16px;
+            margin-top: 25px;
+        }
+        
+        .CardsAT {
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+            margin: 30px auto;
+        }
+        
+        .CardsAT .cardA {
+            padding: 20px 15px;
+        }
+        
+        .profile-img {
+            width: 120px;
+            height: 120px;
+        }
+        
+        .card-contentA h2 {
+            font-size: 20px;
+        }
+        
+        .button {
+            padding: 10px 20px;
+            font-size: 14px;
+            min-width: 140px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .about-us {
+            padding: 25px 20px;
+            margin: 30px 15px;
+        }
+        
+        .about-us .corner {
+            width: 80px;
+        }
+        
+        .CardsAT {
+            grid-template-columns: 1fr;
+            max-width: 400px;
+            margin: 20px auto;
+        }
+        
+        .CardsAT .cardA {
+            padding: 25px 20px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .about-us {
+            padding: 20px 15px;
+            margin: 20px 10px;
+            border-radius: 12px;
+        }
+        
+        .about-us .corner {
+            width: 60px;
+            display: none;
+        }
+        
+        .about-us p {
+            font-size: 14px;
+        }
+        
+        .about-us .closing {
+            font-size: 15px;
+            padding: 12px;
+        }
+        
+        .profile-img {
+            width: 100px;
+            height: 100px;
+        }
+        
+        .card-contentA h2 {
+            font-size: 18px;
+        }
+        
+        .button {
+            padding: 8px 16px;
+            font-size: 13px;
+            min-width: 120px;
+        }
+    }
+</style>
+
+<body>
+    <nav class="swing-in-top-fwd">
+        <a href="./index.html" id="Logo">
+            <img src=" ./Pics/Logo.png" alt="">
+        </a>
+
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+        <label for="menu-toggle" class="close">&times;</label>
+
+        <div id="RightNav">
+            <a id="Op3" class="NavI" href="./index.html">Home</a>
+            <a id="Op2" class="NavI" href="./Books.html">Books</a>
+            <a id="Op1" class="NavI" href="./AboutUs.html">About Us</a>
+            <a id="Op4" class="NavI" href="./Blog.html">Blog</a>
+            <div id="Search">
+                <input type="text" placeholder="Type here..." id="Typehere">
+                <button type="submit">
+                    <img id="Op5" src="./Pics/Search.png" alt="Search">
+                </button>
+            </div>
+            <a id="Op6" class="NavI" href="./VisitUs.html">Visit Us</a>
+        </div>
+    </nav>
+    <div class="bod">
+        <div class="title">
+            <img class="Title-ornament" src="./Pics/Ornup.png" alt="">
+            <h1 class="tracking-in-expand">About-Us</h1>
+            <img class="Title-ornament" src="./Pics/Orn.png" alt="">
+        </div>
+        <section class="about-us">
+            <img src="./Pics/Corner.png" class="corner corner-top-left" alt="">
+            <p>
+                At <strong>Bookistan</strong>, we believe that books are more than ink on paper —
+                they are doors to new worlds, quiet companions, and lifelong teachers.
+            </p>
+
+            <p>
+                Founded with a love for stories and a passion for learning, Bookistan is a welcoming
+                space for readers of all kinds. From timeless classics to modern voices, from academic
+                works to tales of pure imagination, we thoughtfully curate every title to inspire
+                curiosity, creativity, and connection.
+            </p>
+
+            <p>
+                We are more than just a bookstore. We are a community of readers, writers, and dreamers
+                who believe in the power of words to spark ideas, shape perspectives, and bring people
+                together. Whether you are searching for your next favorite book or simply enjoying the
+                calm comfort of reading, we are here for you.
+            </p>
+
+            <p class="closing">
+                At <strong>Bookistan</strong>, every book has a story — and every reader is part of ours.
+            </p>
+            <img src="./Pics/Corner2.png" class="corner corner-bottom-right" alt="">
+
+        </section>
+
+
+    </div>
+    <div class="Authors">
+        <div class="CardsAT">
+            <div class="cardA">
+                <img src="./Pics/A1.jpg" alt="Author Profile" class="profile-img">
+                <div class="card-contentA">
+                    <h2>Author Name</h2>
+                    <p>He is a famous author and is known for "Minus 10".</p>
+                    <a href="./Author.html" class="button" target="_blank">
+                        Find out more
+                        <span class="material-symbols-outlined">&rarr;</span>
+                    </a>
+                </div>
+            </div>
+            <div class="cardA">
+                <img src="./Pics/A2.jpg" alt="Author Profile" class="profile-img">
+                <div class="card-contentA">
+                    <h2>Author Name</h2>
+                    <p>He is a famous author and is known for "Minus 10".</p>
+                    <a href="./Author.html" class="button" target="_blank">
+                        Find out more
+                        <span class="material-symbols-outlined">&rarr;</span>
+                    </a>
+                </div>
+            </div>
+            <div class="cardA">
+                <img src="./Pics/A1.jpg" alt="Author Profile" class="profile-img">
+                <div class="card-contentA">
+                    <h2>Author Name</h2>
+                    <p>He is a famous author and is known for "Minus 10".</p>
+                    <a href="./Author.html" class="button" target="_blank">
+                        Find out more
+                        <span class="material-symbols-outlined">&rarr;</span>
+                    </a>
+                </div>
+            </div>
+            <div class="cardA">
+                <img src="./Pics/A2.jpg" alt="Author Profile" class="profile-img">
+                <div class="card-contentA">
+                    <h2>Author Name</h2>
+                    <p>He is a famous author and is known for "Minus 10".</p>
+                    <a href="./Author.html" class="button" target="_blank">
+                        Find out more
+                        <span class="material-symbols-outlined">&rarr;</span>
+                    </a>
+                </div>
+            </div>
+            <div class="cardA">
+                <img src="./Pics/A1.jpg" alt="Author Profile" class="profile-img">
+                <div class="card-contentA">
+                    <h2>Author Name</h2>
+                    <p>He is a famous author and is known for "Minus 10".</p>
+                    <a href="./Author.html" class="button" target="_blank">
+                        Find out more
+                        <span class="material-symbols-outlined">&rarr;</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+
+
+    </div>
+</body>
+
+</html>

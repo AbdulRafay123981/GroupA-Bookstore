@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookistan</title>
+    <link rel="stylesheet" href="./Nav.css">
+    <link rel="stylesheet" href="./Title.css">
+    <link href="https://fonts.cdnfonts.com/css/berlin-sans-fb-demi" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/x-icon" href="./Pics/Logo.png">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+</head>
+<style>
+    body {
+        background-color: #F6F0D7;
+        color: #043140;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .articles {
+        max-width: 1100px;
+        margin: 40px auto;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+    }
+
+    .article-card {
+        background-color: #FFFFFF;
+        color: #043140;
+        border-radius: 30px;
+        padding: 25px;
+        box-shadow: 0 12px 35px rgba(137, 152, 109, 0.15);
+        transition: all 0.3s ease;
+        border: 2px solid #F6F0D7;
+    }
+
+    .article-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 50px rgba(197, 216, 157, 0.3);
+        border-color: #C5D89D;
+    }
+
+    .article-card h2 {
+        font-family: 'Berlin Sans FB Demi', sans-serif;
+        font-size: 22px;
+        margin-bottom: 10px;
+        color: #043140;
+    }
+
+    .article-card p {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        color: #043140;
+        opacity: 0.9;
+    }
+
+    .article-card a {
+        display: inline-block;
+        padding: 10px 18px;
+        border-radius: 30px;
+        background-color: #89986D;
+        color: #F6F0D7;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.25s ease;
+        border: 2px solid transparent;
+    }
+
+    .article-card a:hover {
+        background-color: #C5D89D;
+        color: #043140;
+        transform: scale(1.05);
+        border-color: #89986D;
+    }
+
+    @media (max-width: 768px) {
+        .articles {
+            padding: 15px;
+            gap: 20px;
+            margin: 30px auto;
+        }
+
+        .article-card {
+            padding: 20px;
+            border-radius: 25px;
+        }
+
+        .article-card h2 {
+            font-size: 20px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .articles {
+            grid-template-columns: 1fr;
+            max-width: 500px;
+            gap: 15px;
+        }
+
+        .article-card {
+            padding: 18px;
+            border-radius: 20px;
+        }
+
+        .article-card h2 {
+            font-size: 18px;
+        }
+
+        .article-card p {
+            font-size: 13px;
+        }
+
+        .article-card a {
+            padding: 8px 16px;
+            font-size: 14px;
+        }
+    }
+</style>
+
+
+
+<body>
+    <nav class="swing-in-top-fwd">
+        <a href="./index.html" id="Logo">
+            <img src=" ./Pics/Logo.png" alt="">
+        </a>
+
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+        <label for="menu-toggle" class="close">&times;</label>
+
+        <div id="RightNav">
+            <a id="Op4" class="NavI" href="./index.html">Home</a>
+            <a id="Op2" class="NavI" href="./Books.html">Books</a>
+            <a id="Op3" class="NavI" href="./AboutUs.html">About Us</a>
+            <a id="Op1" class="NavI" href="./Blog.html">Blog</a>
+            <div id="Search">
+                <input type="text" placeholder="Type here..." id="Typehere">
+                <button type="submit">
+                    <img id="Op5" src="./Pics/Search.png" alt="Search">
+                </button>
+            </div>
+            <a id="Op6" class="NavI" href="./VisitUs.html">Visit Us</a>
+        </div>
+    </nav>
+
+    <div class="bod">
+        <div class="title">
+            <img class="Title-ornament" src="./Pics/Ornup.png" alt="">
+            <h1 class="tracking-in-expand">Blog</h1>
+            <img class="Title-ornament" src="./Pics/Orn.png" alt="">
+        </div>
+        <div class="articles">
+
+            <div class="article-card">
+                <h2>The Magic of Reading</h2>
+                <p>
+                    Discover how books shape imagination, build empathy, and transport readers
+                    into worlds beyond their own.
+                </p>
+                <a href="./SampleArticle.html">Read Article →</a>
+            </div>
+
+            <div class="article-card">
+                <h2>Why Bookstores Still Matter</h2>
+                <p>
+                    In a digital age, bookstores remain cultural sanctuaries that bring
+                    communities together.
+                </p>
+                <a href="./SampleArticle.html">Read Article →</a>
+            </div>
+
+            <div class="article-card">
+                <h2>How to Choose Your Next Book</h2>
+                <p>
+                    From genres to moods, learn simple ways to find books that truly
+                    resonate with you.
+                </p>
+                <a href="./SampleArticle.html">Read Article →</a>
+            </div>
+
+            <div class="article-card">
+                <h2>The Rise of Young Authors</h2>
+                <p>
+                    A look at how emerging writers are reshaping modern literature
+                    with fresh voices.
+                </p>
+                <a href="./SampleArticle.html">Read Article →</a>
+            </div>
+
+            <div class="article-card">
+                <h2>The Magic of Reading</h2>
+                <p>
+                    Discover how books shape imagination, build empathy, and transport readers
+                    into worlds beyond their own.
+                </p>
+                <a href="./SampleArticle.html">Read Article →</a>
+            </div>
+
+            <div class="article-card">
+                <h2>Why Bookstores Still Matter</h2>
+                <p>
+                    In a digital age, bookstores remain cultural sanctuaries that bring
+                    communities together.
+                </p>
+                <a href="./SampleArticle.html">Read Article →</a>
+            </div>
+
+            <div class="article-card">
+                <h2>How to Choose Your Next Book</h2>
+                <p>
+                    From genres to moods, learn simple ways to find books that truly
+                    resonate with you.
+                </p>
+                <a href="./SampleArticle.html">Read Article →</a>
+            </div>
+
+            <div class="article-card">
+                <h2>The Rise of Young Authors</h2>
+                <p>
+                    A look at how emerging writers are reshaping modern literature
+                    with fresh voices.
+                </p>
+                <a href="./SampleArticle.html">Read Article →</a>
+            </div>
+
+            <div class="article-card">
+                <h2>The Magic of Reading</h2>
+                <p>
+                    Discover how books shape imagination, build empathy, and transport readers
+                    into worlds beyond their own.
+                </p>
+                <a href="./SampleArticle.html">Read Article →</a>
+            </div>
+
+            <div class="article-card">
+                <h2>Why Bookstores Still Matter</h2>
+                <p>
+                    In a digital age, bookstores remain cultural sanctuaries that bring
+                    communities together.
+                </p>
+                <a href="./SampleArticle.html">Read Article →</a>
+            </div>
+
+            <div class="article-card">
+                <h2>How to Choose Your Next Book</h2>
+                <p>
+                    From genres to moods, learn simple ways to find books that truly
+                    resonate with you.
+                </p>
+                <a href="./SampleArticle.html">Read Article →</a>
+            </div>
+
+            <div class="article-card">
+                <h2>The Rise of Young Authors</h2>
+                <p>
+                    A look at how emerging writers are reshaping modern literature
+                    with fresh voices.
+                </p>
+                <a href="./SampleArticle.html">Read Article →</a>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,451 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap');
+
+/* Book Detail Page - Classic Curator Theme */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F5F1E8; /* Parchment background */
+    font-family: 'Inter', sans-serif;
+    color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 60px; /* Account for fixed navbar */
+}
+
+.bod {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 1000px;
+    max-width: 90%;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(44, 24, 16, 0.15);
+    border: 3px solid #8B4513; /* Saddle Brown border */
+    margin: 20px;
+    gap: 40px;
+    position: relative;
+}
+
+/* Add decorative corner */
+.bod::before {
+    content: '✦';
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #F5F1E8;
+    color: #8B4513;
+    padding: 0 15px;
+    font-size: 24px;
+    z-index: 1;
+}
+
+.Bookcover {
+    width: 320px;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 12px;
+    flex-shrink: 0;
+    border: 4px solid #5F8D4E; /* Muted Green border */
+    box-shadow: 0 10px 25px rgba(95, 141, 78, 0.2);
+    transition: all 0.3s ease;
+}
+
+.Bookcover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(95, 141, 78, 0.3);
+    border-color: #4A6F3A; /* Darker Green */
+}
+
+.book-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+}
+
+.book-info h1 {
+    margin: 0;
+    font-size: 36px;
+    color: #2C1810; /* Dark Brown */
+    font-family: 'Merriweather', serif;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.book-info h2 {
+    margin: 10px 0;
+    font-size: 22px;
+    color: #8B4513; /* Saddle Brown */
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+
+.book-info h2 a {
+    color: #5F8D4E; /* Muted Green */
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
+}
+
+.book-info h2 a:hover {
+    color: #4A6F3A; /* Darker Green */
+    border-bottom-color: #8B4513; /* Saddle Brown */
+}
+
+.book-info p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333333;
+    margin-bottom: 25px;
+    padding: 20px 0;
+    border-top: 1px solid rgba(139, 69, 19, 0.2);
+    border-bottom: 1px solid rgba(139, 69, 19, 0.2);
+}
+
+.R {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: rgba(245, 241, 232, 0.5); /* Light parchment */
+    border-radius: 12px;
+    border: 2px solid rgba(139, 69, 19, 0.2);
+}
+
+.stars {
+    display: flex;
+    gap: 8px;
+}
+
+.stars span {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    position: relative;
+}
+
+/* Font Awesome star icons - FIXED */
+.fa-star {
+    color: #D4A574; /* Warm Beige for unselected stars */
+    font-size: 28px;
+    transition: all 0.3s ease;
+}
+
+.fa-star.checked {
+    color: #8B4513; /* Saddle Brown for selected stars */
+}
+
+.fa-star:hover {
+    color: #5F8D4E; /* Muted Green on hover */
+    transform: scale(1.2);
+}
+
+/* Visit Us button styling - Updated to match Nav.css */
+#Op6 {
+    background-color: #5F8D4E; /* Muted Green */
+    color: white;
+    border-radius: 30px;
+    font-weight: 700;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    min-width: 150px;
+}
+
+#Op6:hover {
+    background-color: #4A6F3A; /* Darker Green */
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(95, 141, 78, 0.3);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Book details section */
+.book-details {
+    margin-top: 30px;
+    padding: 25px;
+    background-color: rgba(245, 241, 232, 0.7);
+    border-radius: 12px;
+    border-left: 4px solid #5F8D4E;
+}
+
+.book-details h3 {
+    font-family: 'Merriweather', serif;
+    color: #2C1810;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(139, 69, 19, 0.1);
+}
+
+.detail-item span:first-child {
+    color: #8B4513;
+    font-weight: 600;
+}
+
+.detail-item span:last-child {
+    color: #2C1810;
+}
+
+/* Action buttons */
+.button {
+    padding: 14px 30px;
+    background-color: #2C1810; /* Dark Brown */
+    color: #F5F1E8; /* Cream */
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    min-width: 200px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button:hover {
+    background-color: #8B4513; /* Saddle Brown */
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(44, 24, 16, 0.2);
+}
+
+/* Book metadata */
+.book-meta {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #666;
+    font-size: 14px;
+}
+
+.meta-item i {
+    color: #8B4513;
+}
+
+/* Responsive Design */
+
+/* Large screens */
+@media (max-width: 1200px) {
+    .bod {
+        width: 90%;
+        max-width: 900px;
+    }
+}
+
+/* Tablet landscape */
+@media (max-width: 992px) {
+    .bod {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+        gap: 30px;
+    }
+    
+    .Bookcover {
+        width: 280px;
+        height: 420px;
+    }
+    
+    .book-info {
+        width: 100%;
+    }
+    
+    .detail-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tablet portrait */
+@media (max-width: 768px) {
+    body {
+        padding-top: 55px; /* Adjusted for mobile navbar */
+    }
+    
+    .bod {
+        padding: 25px;
+        margin: 15px;
+        border-radius: 15px;
+    }
+    
+    .Bookcover {
+        width: 250px;
+        height: 375px;
+    }
+    
+    .book-info h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+    
+    .book-info h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    .book-info p {
+        text-align: center;
+        font-size: 15px;
+    }
+    
+    .R {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .stars {
+        justify-content: center;
+    }
+    
+    #Op6 {
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    .button {
+        min-width: 100%;
+        max-width: 250px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    body {
+        padding-top: 50px;
+    }
+    
+    .bod {
+        padding: 20px;
+        margin: 10px;
+        border-radius: 12px;
+    }
+    
+    .Bookcover {
+        width: 100%;
+        height: auto;
+        max-height: 400px;
+    }
+    
+    .book-info h1 {
+        font-size: 26px;
+    }
+    
+    .book-info h2 {
+        font-size: 18px;
+    }
+    
+    .book-info p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+    
+    .fa-star {
+        font-size: 24px;
+    }
+    
+    #Op6 {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+    
+    .button {
+        padding: 12px 20px;
+        font-size: 15px;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 360px) {
+    .bod {
+        padding: 15px;
+    }
+    
+    .book-info h1 {
+        font-size: 24px;
+    }
+    
+    .book-info p {
+        font-size: 14px;
+    }
+    
+    .detail-grid {
+        font-size: 14px;
+    }
+    
+    .fa-star {
+        font-size: 20px;
+    }
+}
+
+/* Book status indicator */
+.book-status {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: #5F8D4E;
+    color: white;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-left: 15px;
+    vertical-align: middle;
+}
+
+/* Price display */
+.price {
+    font-size: 28px;
+    color: #2C1810;
+    font-weight: 700;
+    margin: 15px 0;
+    font-family: 'Merriweather', serif;
+}
+
+.price span {
+    font-size: 16px;
+    color: #666;
+    text-decoration: line-through;
+    margin-left: 10px;
+}
