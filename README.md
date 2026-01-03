@@ -7,7 +7,7 @@ This project involves creating a comprehensive online presence for a bookstore. 
 - Abdul Rafay (GitHub: [AbdulRafay123981](https://github.com/AbdulRafay123981))
 - Abdul Ahad (GitHub: [AbdulAhada17](https://github.com/AbdulAhada17))
 - Asad Hussain (GitHub: [muhammadasadhussain8666302](https://github.com/muhammadasadhussain8666302))
-- Maheen Mohsin (GitHub: [maheen-a11y](https://github.com/maheen-a11y))
+- Maheen Mohsin (GitHub: [maheenlakhvera-a11y](https://github.com/maheenlakhvera-a11y))
 - Alishwa Rizwan (GitHub: [alishwa-pixel](https://github.com/alishwa-pixel))
 
 
